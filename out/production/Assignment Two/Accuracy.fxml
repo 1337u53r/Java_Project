@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import impl.org.controlsfx.skin.DecorationPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchor_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AccuracyController">
+   <children>
+      <DecorationPane fx:id="decor_pane_top" prefHeight="66.0" prefWidth="600.0" style="-fx-background-color: #4286f4#4286f4;" />
+      <Label fx:id="lbl_set_accuracy" layoutX="244.0" layoutY="27.0" text="SET ACCURACY" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Bold" size="14.0" />
+         </font>
+      </Label>
+      <JFXSlider fx:id="sld_range" blockIncrement="1.0" layoutX="139.0" layoutY="191.0" max="5.0" min="1.0" minorTickCount="1" prefHeight="38.0" prefWidth="322.0" showTickLabels="true" showTickMarks="true" value="1.0" />
+      <Label fx:id="lbl_text_range" layoutX="197.0" layoutY="124.0" text="Choose a range between 1 to 5">
+         <font>
+            <Font name="SansSerif Bold" size="14.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btn_set" buttonType="RAISED" layoutX="237.0" layoutY="264.0" prefHeight="38.0" prefWidth="126.0" style="-fx-background-color: #4286f4#4286f4;" text="SET" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Bold" size="14.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

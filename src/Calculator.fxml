@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import impl.org.controlsfx.skin.DecorationPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchor_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CalculatorController">
+   <children>
+      <DecorationPane fx:id="decor_pane_top" prefHeight="66.0" prefWidth="600.0" style="-fx-background-color: #4286f4#4286f4;" />
+      <Label fx:id="lbl_calculator" layoutX="52.0" layoutY="27.0" text="CALCULATOR" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Bold" size="14.0" />
+         </font>
+      </Label>
+      <JFXRadioButton fx:id="rad_add" layoutX="310.0" layoutY="114.0" selected="true" text="Add">
+         <toggleGroup>
+            <ToggleGroup fx:id="OperatorGroup" />
+         </toggleGroup></JFXRadioButton>
+      <JFXRadioButton fx:id="rad_subtract" layoutX="310.0" layoutY="150.0" text="Subtract" toggleGroup="$OperatorGroup" />
+      <JFXRadioButton fx:id="rad_multiply" layoutX="428.0" layoutY="114.0" text="Multiply" toggleGroup="$OperatorGroup" />
+      <JFXRadioButton fx:id="rad_divide" layoutX="428.0" layoutY="150.0" text="Divide" toggleGroup="$OperatorGroup" />
+      <Label fx:id="lbl_number_one" layoutX="52.0" layoutY="114.0" text="Number 1: ">
+         <font>
+            <Font name="SansSerif Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_number_two" layoutX="52.0" layoutY="150.0" text="Number 2:">
+         <font>
+            <Font name="SansSerif Regular" size="14.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txt_number_one" layoutX="124.0" layoutY="109.0" prefHeight="27.0" prefWidth="141.0" />
+      <JFXTextField fx:id="txt_number_two" layoutX="124.0" layoutY="145.0" prefHeight="27.0" prefWidth="141.0" />
+      <Label fx:id="lbl_number_txt" layoutX="52.0" layoutY="85.0" text="Enter two numbers">
+         <font>
+            <Font name="SansSerif Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_operator_txt" layoutX="325.0" layoutY="85.0" text="Choose an operator">
+         <font>
+            <Font name="SansSerif Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_result" layoutX="325.0" layoutY="189.0" text="Result:">
+         <font>
+            <Font name="SansSerif Bold" size="14.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btn_solve" buttonType="RAISED" layoutX="52.0" layoutY="207.0" onAction="#handleSolveButtonAction" prefHeight="38.0" prefWidth="126.0" style="-fx-background-color: #4286f4#4286f4 #4286f4#4286f4;" text="SOLVE" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="14.0" />
+         </font>
+      </JFXButton>
+      <DecorationPane fx:id="decor_pane_answer" layoutX="325.0" layoutY="217.0" prefHeight="27.0" prefWidth="199.0" style="-fx-background-color: #cfcfd1#cfcfd1;">
+         <children>
+            <Label fx:id="lbl_answer" prefHeight="16.0" prefWidth="186.0">
+               <font>
+                  <Font name="SansSerif Regular" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </DecorationPane>
+      <JFXButton fx:id="btn_home" layoutX="521.0" layoutY="20.0" onAction="#handleHomeButtonAction" style="-fx-background-color: #ffffff;" text="HOME" textFill="#4286f4">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
